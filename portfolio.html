@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@heroicons/react/outline.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Your Website</title>
+    <style>
+        @keyframes pulse {
+            0% {
+                transform: scale(0.8);
+
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s 2s ease-in-out;
+            /* Run the fade-in animation once */
+        }
+
+        .bg-pulse {
+            animation: pulse 2s 1s 1;
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+
+    <!-- Mobile Navigation -->
+    <div class="fixed w-full bg-white text-black py-3 px-8 flex justify-between items-center sm:hidden">
+        <img src="img/logo.png" alt="Company Logo" class="h-8 w-auto">
+        <button id="mobileNavToggle" class="text-blue-500 focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <div class="fixed w-full bg-white container mx-auto py-4 px-8 hidden sm:flex justify-between items-center">
+        <div class="flex items-center">
+            <img src="img/logo.png" alt="Company Logo" class="h-12 w-auto">
+        </div>
+        <div class="flex space-x-4 py-2 poppins-medium ">
+            <a href="index.html" class="text-black hover:text-blue-500 py-2">About</a>
+            <a href="portfolio.html" class="text-black hover:text-blue-500 py-2">Portfolio</a>
+            <a href=" https://www.fiverr.com/peiris809" class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition duration-300">Contact Me</a>
+        </div>
+    </div>
+
+    <!-- Mobile Navigation Links -->
+<div id="mobileNav" class="sm:hidden hidden bg-white text-black py-4 px-4 text-center poppins-medium ">
+    <a href="index.html" class="block text-blue-500  py-2">About</a>
+    <a href="portfolio.html" class="block text-blue-500  py-2">Portfolio</a>
+    <a href=" https://www.fiverr.com/peiris809" class="block bg-blue-500 text-white px-4 py-2 rounded-full max-w-xs mx-auto">Contact me</a>
+</div>
+<section class="pt-10">
+    <div class="container mx-auto" style="padding: 5vh 5vw;">
+        <div class="flex flex-col sm:flex-row items-center justify-between p-4">
+            <div id="productTabs" class="flex flex-wrap sm:space-x-4 text-white mb-4 sm:mb-0">
+                <div class="tab cursor-pointer rounded-full px-4 py-2" onclick="filterProducts('all')">All Articles</div>
+                <div class="tab cursor-pointer rounded-full px-4 py-2" onclick="filterProducts('science')">Science</div>
+                <div class="tab cursor-pointer rounded-full px-4 py-2" onclick="filterProducts('business')">business </div>
+            </div>
+        
+            <div class="flex items-center">
+                <input id="searchInput" type="text" placeholder="Search..." class="px-2 py-1 border border-gray-300 rounded-md focus:outline-none mb-2 sm:mb-0">
+                <button id="searchButton" class="ml-2 px-4 py-1 bg-blue-500 text-white rounded-md">Search</button>
+            </div>
+            <datalist id="searchPredictions">
+                <!-- Dynamically populated options based on your data or predefined suggestions -->
+                <!-- Example: <option value="Product 1"> -->
+            </datalist>
+        </div>
+        
+        
+        <div id="productContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8" >
+            <!-- Product cards will be dynamically added here -->
+        </div>
+    </div>
+</section>
+<div class="fixed bottom-4 right-4">
+    <button id="toggleChatbot" class="m-4 bg-blue-500 text-white px-4 py-4 rounded-full focus:outline-none first_button">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
+      </svg>
+      
+    </button>
+  </div>
+  
+  <div id="chatbotContainer" class="hidden fixed bottom-0 right-0 p-4 max-w-xs">
+        <div class="bg-blue-500 p-4 rounded-md flex items-center space-x-4">
+          <img src="img/profilepicbot.png" alt="Profile Image" class="h-12 w-12 rounded-full">
+          <div>
+              <h2 class="text-white text-lg font-bold">Your Name</h2>
+              <p class="text-white">Content Writer</p>
+          </div>
+        </div>
+      <div class="bg-white px-8 rounded shadow-md max-w-md w-full">
+        
+          <form action="https://api.staticforms.xyz/submit" method="post" class="space-y-2 pb-4">
+              <input type="hidden" name="accessKey" value="1f8ea6ef-10b0-4199-8cde-5d7b512f133e">
+              <label for="email" class="block text-gray-600">Email</label>
+              <input type="text" name="email" id="email" class="w-full border rounded-md py-2 px-3 focus:outline-none focus:border-blue-500">
+  
+              <label for="message" class="block text-gray-600">Message</label>
+              <textarea name="message" id="message" class="w-full border rounded-md py-2 px-3 focus:outline-none focus:border-blue-500"></textarea>
+  
+  
+              <input type="hidden" name="replyTo" value="@">
+  
+              <input type="hidden" name="redirectTo" value="https://coolmotion.github.io/Writer-portfolio/thanks">
+  
+              <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-md focus:outline-none hover:bg-blue-600">Submit</button>
+          </form>
+      </div>
+  </div>
+<footer class="relative bg-blue-500 pt-8 pb-6">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-wrap text-left lg:text-left">
+        <div class="w-full lg:w-6/12 px-4">
+          <h4 class="text-3xl fonat-semibold text-white">Contact-now!</h4>
+          <h5 class="text-lg mt-0 mb-2 text-white">
+            Find  on any of these platforms,  respond within 1-2 business days.
+          </h5>
+          <div class="mt-6 lg:mb-0 mb-6">
+            
+                <button class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 rounded-full outline-none focus:outline-none mr-2" type="button">
+                  <i class="fab fa-instagram"></i>
+                </button>
+                <button class="bg-white text-black shadow-lg font-normal h-10 w-10 rounded-full outline-none focus:outline-none mr-2" type="button">
+                  <i class="fab fa-facebook-square"></i>
+                </button>
+                <button class="bg-white text-black shadow-lg font-normal h-10 w-10 rounded-full outline-none focus:outline-none mr-2" type="button">
+                  <i class="fab fa-linkedin"></i>
+                </button>
+              
+          </div>
+        </div>
+        <div class="w-full lg:w-6/12 px-4">
+          <div class="flex flex-wrap items-top mb-6">
+            <div class="w-full lg:w-4/12 px-4 ml-auto">
+              <span class="block uppercase text-black text-sm font-semibold mb-2"></span>
+              <ul class="list-unstyled">
+                <li>
+                  <a class="text-black hover:text-black font-semibold block pb-2 text-sm" href="https://www.creative-tim.com/presentation?ref=njs-profile"></a>
+                </li>
+                <li>
+                  <a class="text-black hover:text-black font-semibold block pb-2 text-sm" href="https://blog.creative-tim.com?ref=njs-profile"></a>
+                </li>
+                <li>
+                  <a class="text-black hover:text-black font-semibold block pb-2 text-sm" href="https://www.github.com/creativetimofficial?ref=njs-profile"></a>
+                </li>
+                <li>
+                  <a class="text-black hover:text-black font-semibold block pb-2 text-sm" href="https://www.creative-tim.com/bootstrap-themes/free?ref=njs-profile"> </a>
+                </li>
+              </ul>
+            </div>
+            <div class="w-full lg:w-4/12 px-4">
+              <span class="block uppercase text-white text-sm font-bold mb-2">Adress </span>
+              <ul class="list-unstyled">
+                <li>
+                  <a class="text-white hover:text-white font-semibold block pb-2 text-sm" href="https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-profile">No.2/3</a>
+                </li>
+                <li>
+                  <a class="text-white hover:text-white font-semibold block pb-2 text-sm" href="https://creative-tim.com/terms?ref=njs-profile">Flower Street</a>
+                </li>
+                <li>
+                  <a class="text-white hover:text-white font-semibold block pb-2 text-sm" href="https://creative-tim.com/privacy?ref=njs-profile">Uruwala</a>
+                </li>
+                <li>
+                  <a class="text-white hover:text-white font-semibold block pb-2 text-sm" href="https://creative-tim.com/contact-us?ref=njs-profile">Sri Lanka</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="my-6 border-blatext-black">
+      <div class="flex flex-wrap items-center md:justify-between justify-center">
+        <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+          <div class="text-sm text-black font-semibold py-1">
+            Copyright © <span id="get-current-year">2024</span><a href="https://www.creative-tim.com/product/notus-js" class="text-black hover:text-gray-800" target="_blank"> Coolmotion
+            <a href="https://www.creative-tim.com?ref=njs-profile" class="text-black hover:text-black"></a>.
+          </div>
+        </div>
+      </div>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="script.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $('#mobileNavToggle').click(function(){
+            $('#mobileNav').slideToggle();
+        });
+    });
+</script>
+<script>
+    $(document).ready(function() {
+      // Toggle chatbot visibility
+      $("#toggleChatbot").click(function() {
+        $("#chatbotContainer").toggleClass("hidden");
+      });
+  
+      // Close chatbot when clicking outside of it
+      $(document).on("click", function(event) {
+        if (!$(event.target).closest("#chatbotContainer, #toggleChatbot").length) {
+          // Click outside of chatbot container and toggle button
+          $("#chatbotContainer").addClass("hidden");
+        }
+      });
+    });
+  </script>
+</body>
+</html>

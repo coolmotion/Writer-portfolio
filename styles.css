@@ -105,4 +105,94 @@
     font-weight: 900;
     font-style: italic;
   }
+  .first_button {
+    animation: shake 2.32s cubic-bezier(.36, .07, .19, .97) both infinite;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
   
+  @keyframes shake {
+    25%, 75% {
+      transform: translate3d(0, 0, 0);
+    }
+    30%, 70% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    35%, 65% {
+      transform: translate3d(2px, 0, 0);
+    }
+    40%, 50%, 60% {
+      transform: translate3d(-4px, 0, 0);
+    }
+    45%, 55% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+  .tab {
+    cursor: pointer;
+    padding: 8px 16px;
+    color: blue;
+    border-radius: 5px;
+    border-color: blue;
+  }
+  
+  /* Style for the selected tab */
+  .tab.selected {
+    background-color: #000000; /* Change to your desired background color */
+    color: #fff; /* Change to your desired text color */
+    border-radius: 20px;
+  }
+  .transparent-background {
+    opacity: 0.5;
+  }
+  /*Animations*/
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-inn {
+  animation: fadeIn 1s 2s ease-in-out;
+  /* Run the fade-in animation once */
+}
+
+.bg-pulse {
+  animation: pulse 2s 1s 1;
+}
+
+.logo-container {
+  padding: 0;
+  /* Set the desired padding for the logo container */
+}
+
+.v-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+  /* 16:9 aspect ratio */
+}
+
+.v-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
