@@ -12,7 +12,9 @@
     <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <link rel="stylesheet" href="styles.css">
-    <title>Your Website</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+
+    <title>Your Name</title>
     <style>
         @keyframes pulse {
             0% {
@@ -47,35 +49,33 @@
 </head>
 
 <body class="bg-white">
-
-    <!-- Mobile Navigation -->
-    <div class="fixed w-full bg-white text-black py-3 px-8 flex justify-between items-center sm:hidden">
-        <img src="img/logo.png" alt="Company Logo" class="h-8 w-auto">
-        <button id="mobileNavToggle" class="text-blue-500 focus:outline-none">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-            </svg>
-        </button>
-    </div>
-
-    <!-- Desktop Navigation -->
-    <div class="fixed w-full bg-white container mx-auto py-4 px-8 hidden sm:flex justify-between items-center">
-        <div class="flex items-center">
-            <img src="img/logo.png" alt="Company Logo" class="h-12 w-auto">
-        </div>
-        <div class="flex space-x-4 py-2 poppins-medium ">
-            <a href="index.html" class="text-black hover:text-blue-500 py-2">About</a>
-            <a href="portfolio.html" class="text-black hover:text-blue-500 py-2">Portfolio</a>
-            <a href=" https://www.fiverr.com/peiris809" class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition duration-300">Contact Me</a>
-        </div>
-    </div>
-
-    <!-- Mobile Navigation Links -->
-<div id="mobileNav" class="sm:hidden hidden bg-white text-black py-4 px-4 text-center poppins-medium ">
-    <a href="index.html" class="block text-blue-500  py-2">About</a>
-    <a href="portfolio.html" class="block text-blue-500  py-2">Portfolio</a>
-    <a href=" https://www.fiverr.com/peiris809" class="block bg-blue-500 text-white px-4 py-2 rounded-full max-w-xs mx-auto">Contact me</a>
+  <div class=" fixed z-999 w-full bg-white text-black py-3 px-8 flex justify-between items-center sm:hidden" style="z-index: 500;">
+    <img src="img/logo.png" alt="Company Logo" class="h-8 w-auto">
+    <button id="mobileNavToggle" class="text-blue-500 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+    </button>
 </div>
+
+<!-- Desktop Navigation -->
+<div class="z-50 w-full fixed bg-white container mx-auto py-4 px-8 hidden sm:flex justify-between items-center">
+    <div class="flex items-center">
+        <img src="img/logo.png" alt="Company Logo" class="h-12 w-auto">
+    </div>
+    <div class="flex space-x-4 py-2 poppins-medium ">
+        <a href="#" class="text-black hover:text-blue-500 py-2">About</a>
+        <a href="portfolio.html" class="text-black hover:text-blue-500 py-2">Portfolio</a>
+        <a href=" https://www.fiverr.com/peiris809" class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition duration-300">Contact Me</a>
+    </div>
+</div>
+
+<!-- Mobile Navigation Links -->
+        <div id="mobileNav" class="fixed mt-12 w-full bg-white sm:hidden hidden bg-white text-black py-4 px-4 text-center poppins-medium " style="z-index: 500;">
+            <a href="index.html" class="block text-blue-500  py-2">About</a>
+            <a href="portfolio.html" class="block text-blue-500  py-2">Portfolio</a>
+            <a href=" https://www.fiverr.com/peiris809" class="block bg-blue-500 text-white px-4 py-2 rounded-full max-w-xs mx-auto">Contact me</a>
+        </div>
 <section class="pt-10">
     <div class="container mx-auto" style="padding: 5vh 5vw;">
         <div class="flex flex-col sm:flex-row items-center justify-between p-4">
