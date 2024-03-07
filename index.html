@@ -11,12 +11,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    <title>Your Website</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <title>Your Name</title>
 </head>
 <body class="bg-white">
+  <section>
+    <div class="splash-screen">
+      <img src="img/logosplash.png" alt="Logo" class="logo">
+    </div>
+  </section>
 
-    <!-- Mobile Navigation -->
-    <div class="fixed w-full bg-white text-black py-3 px-8 flex justify-between items-center sm:hidden">
+    <div class=" fixed z-999 w-full bg-white text-black py-3 px-8 flex justify-between items-center sm:hidden" style="z-index: 500;">
         <img src="img/logo.png" alt="Company Logo" class="h-8 w-auto">
         <button id="mobileNavToggle" class="text-blue-500 focus:outline-none">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -24,21 +29,21 @@
             </svg>
         </button>
     </div>
-
+   
     <!-- Desktop Navigation -->
-    <div class="w-full fixed bg-white container mx-auto py-4 px-8 hidden sm:flex justify-between items-center">
+    <div class="z-50 w-full fixed bg-white container mx-auto py-4 px-8 hidden sm:flex justify-between items-center">
         <div class="flex items-center">
             <img src="img/logo.png" alt="Company Logo" class="h-12 w-auto">
         </div>
         <div class="flex space-x-4 py-2 poppins-medium ">
             <a href="#" class="text-black hover:text-blue-500 py-2">About</a>
             <a href="portfolio.html" class="text-black hover:text-blue-500 py-2">Portfolio</a>
-            <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition duration-300">Contact Me</a>
+            <a href=" https://www.fiverr.com/peiris809" class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition duration-300">Contact Me</a>
         </div>
     </div>
 
     <!-- Mobile Navigation Links -->
-<div id="mobileNav" class="sm:hidden hidden bg-white text-black py-4 px-4 text-center poppins-medium ">
+<div id="mobileNav" class="fixed mt-12 w-full bg-white sm:hidden hidden bg-white text-black py-4 px-4 text-center poppins-medium " style="z-index: 500;">
     <a href="index.html" class="block text-blue-500  py-2">About</a>
     <a href="portfolio.html" class="block text-blue-500  py-2">Portfolio</a>
     <a href=" https://www.fiverr.com/peiris809" class="block bg-blue-500 text-white px-4 py-2 rounded-full max-w-xs mx-auto">Contact me</a>
@@ -84,7 +89,7 @@
     
 </section>
 
-<div class="fixed bottom-4 right-4">
+<div class="z-999 fixed bottom-4 right-4">
     <button id="toggleChatbot" class="m-4 bg-blue-500 text-white px-4 py-4 rounded-full focus:outline-none first_button">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
         <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
@@ -121,12 +126,12 @@
       </div>
   </div>
   
-<section class="border-t-4 border-blue-500 mb-8">
-<h1 class="text-5xl text-left font-bold" style="margin:2vw 8vw;">Skills</h1>
-<p class="text-xl text-gray-600  text-left " style="margin:0 8vw; margin-top: 8vh;">Dive into my skill set, where proficiency meets passion. From strategic SEO implementation to crafting engaging narratives, my skills reflect a dedication to enhancing online presence and delivering impactful content.</p>
+<section class="z-4 border-t-4 border-blue-500 mb-8">
+<h1 class="text-5xl text-left font-bold animated-text" style="margin:2vw 8vw;">Skills</h1>
+<p class="animated-text text-gray-600  text-left " style="margin:0 8vw; margin-top: 8vh;">Dive into my skill set, where proficiency meets passion. From strategic SEO implementation to crafting engaging narratives, my skills reflect a dedication to enhancing online presence and delivering impactful content.</p>
     <div class="p-4  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 " style="margin-top: 4vh;margin: 0 2vw;">
         <!-- Card 1: SEO Optimization -->
-        <div class="bg-white p-6 rounded-lg shadow-xl flex flex-col items-center justify-center sm:m-0 sm:mx-5vw">
+        <div class="animated-text p-6 rounded-lg shadow-xl flex flex-col items-center justify-center sm:m-0 sm:mx-5vw">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mb-4 w-24 h-24 p-6 bg-blue-500 rounded-full text-white ">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12a7.5 7.5 0 0 0 15 0m-15 0a7.5 7.5 0 1 1 15 0m-15 0H3m16.5 0H21m-1.5 0H12m-8.457 3.077 1.41-.513m14.095-5.13 1.41-.513M5.106 17.785l1.15-.964m11.49-9.642 1.149-.964M7.501 19.795l.75-1.3m7.5-12.99.75-1.3m-6.063 16.658.26-1.477m2.605-14.772.26-1.477m0 17.726-.26-1.477M10.698 4.614l-.26-1.477M16.5 19.794l-.75-1.299M7.5 4.205 12 12m6.894 5.785-1.149-.964M6.256 7.178l-1.15-.964m15.352 8.864-1.41-.513M4.954 9.435l-1.41-.514M12.002 12l-3.75 6.495" />
                   </svg>
@@ -136,7 +141,7 @@
             <p class="text-gray-600">Enhance your online presence with content optimized for search engines.</p>
         </div>
         <!-- Card 2:  -->
-        <div class="bg-white p-6 rounded-lg shadow-xl flex flex-col items-center justify-center sm:m-0 sm:mx-5vw">
+        <div class="animated-text p-6 rounded-lg shadow-xl flex flex-col items-center justify-center sm:m-0 sm:mx-5vw">
             
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mb-4 w-24 h-24 p-6 bg-blue-500 rounded-full text-white ">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z" />
@@ -148,7 +153,7 @@
         <p class="text-gray-600">Capture your audience's attention with compelling and engaging content.</p>
         </div>
                 <!-- Card 3: -->
-        <div class="bg-white p-6 rounded-lg shadow-xl flex flex-col items-center justify-center sm:m-0 sm:mx-5vw">
+        <div class="animated-text p-6 rounded-lg shadow-xl flex flex-col items-center justify-center sm:m-0 sm:mx-5vw">
     
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mb-4 w-24 h-24 p-6 bg-blue-500 rounded-full text-white ">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
@@ -159,7 +164,7 @@
         
         <p class="text-gray-600">We deliver unique and original content tailored to your brand.</p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-xl flex flex-col items-center justify-center sm:m-0 sm:mx-5vw">
+        <div class="animated-text p-6 rounded-lg shadow-xl flex flex-col items-center justify-center sm:m-0 sm:mx-5vw">
     
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mb-4 w-24 h-24 p-6 bg-blue-500 rounded-full text-white ">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z" />
@@ -174,12 +179,12 @@
     </div>
 </section>
 <section class="border-t-4 border-blue-500 mb-8">
-    <h1 class="text-5xl text-left font-bold" style="margin:2vw 8vw;">Featured Articles</h1>
+    <h1 class="animated-text text-5xl text-left font-bold" style="margin:2vw 8vw;">Featured Articles</h1>
     
   <div class="container mx-auto my-8 p-4">
     <div class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" style="margin: 0 5vw;">
       <!-- Featured Article 1 -->
-      <div class="bg-white rounded-lg overflow-hidden shadow-md">
+      <div class="animated-text rounded-lg overflow-hidden shadow-md">
         <img src="img/img1.webp" alt="Featured Article 1" class="w-full h-40 object-cover">
         <div class="p-4">
           <h3 class="text-xl font-semibold mb-2">Article Title 1</h3>
@@ -189,7 +194,7 @@
       </div>
 
       <!-- Featured Article 2 -->
-      <div class="bg-white rounded-lg overflow-hidden shadow-md">
+      <div class="animated-text rounded-lg overflow-hidden shadow-md">
         <img src="img/img2.jpeg" alt="Featured Article 2" class="w-full h-40 object-cover">
         <div class="p-4">
           <h3 class="text-xl font-semibold mb-2">Article Title 2</h3>
@@ -199,7 +204,7 @@
       </div>
 
       <!-- Featured Article 3 -->
-      <div class="bg-white rounded-lg overflow-hidden shadow-md">
+      <div class="animated-text rounded-lg overflow-hidden shadow-md">
         <img src="img/img3.jpeg" alt="Featured Article 3" class="w-full h-40 object-cover">
         <div class="p-4">
           <h3 class="text-xl font-semibold mb-2">Article Title 3</h3>
@@ -209,7 +214,7 @@
       </div>
 
       <!-- Featured Article 4 -->
-      <div class="bg-white rounded-lg overflow-hidden shadow-md">
+      <div class="animated-text rounded-lg overflow-hidden shadow-md">
         <img src="img/img4.webp" alt="Featured Article 4" class="w-full h-40 object-cover">
         <div class="p-4">
           <h3 class="text-xl font-semibold mb-2">Article Title 4</h3>
@@ -219,7 +224,7 @@
       </div>
 
       <!-- Featured Article 5 -->
-      <div class="bg-white rounded-lg overflow-hidden shadow-md">
+      <div class="animated-text rounded-lg overflow-hidden shadow-md">
         <img src="img/img5.webp" alt="Featured Article 5" class="w-full h-40 object-cover">
         <div class="p-4">
           <h3 class="text-xl font-semibold mb-2">Article Title 5</h3>
@@ -230,7 +235,7 @@
     </div>
 
     <!-- Read All Articles Button -->
-    <div class="text-center mt-8">
+    <div class="animated-text mt-8">
       <a href="#" class="bg-blue-500 text-white py-2 px-4 rounded-full inline-block">Read All Articles</a>
     </div>
   </div>
@@ -315,6 +320,22 @@
             });
         });
     </script>
+      <script>
+        const animatedTextElements = document.querySelectorAll('.animated-text');
+    
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('fade-in');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.5 });
+    
+        animatedTextElements.forEach(element => {
+          observer.observe(element);
+        });
+      </script>
     <script>
         $(document).ready(function() {
           // Toggle chatbot visibility
